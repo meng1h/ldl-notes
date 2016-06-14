@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>shadowsock · GitBook</title>
+        <title>mongodb · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="zeal.html" />
     
-    
-    <link rel="prev" href="redis.html" />
+    <link rel="prev" href="zeal.html" />
     
 
     </head>
@@ -180,7 +178,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="shadowsock.html">
+        <li class="chapter " data-level="1.8" data-path="shadowsock.html">
             
                 <a href="shadowsock.html">
             
@@ -206,7 +204,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="mongodb.html">
+        <li class="chapter active" data-level="1.10" data-path="mongodb.html">
             
                 <a href="mongodb.html">
             
@@ -249,7 +247,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >shadowsock</a>
+        <a href="." >mongodb</a>
     </h1>
 </div>
 
@@ -264,21 +262,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x914D;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;">&#x914D;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;</h3>
-<pre><code>{
-
-&quot;server&quot;:&quot;jp3.iss.tf&quot;,
-&quot;server_port&quot;:443,
-&quot;local_address&quot;: &quot;127.0.0.1&quot;,
-&quot;local_port&quot;:10808,
-&quot;password&quot;:&quot;68875023&quot;,
-&quot;timeout&quot;:600,
-&quot;method&quot;:&quot;aes-256-cfb&quot;
-}
-</code></pre><p>&#x542F;&#x52A8;&#x670D;&#x52A1; sslocal -c ~/showdow.config    &#x5176;&#x4E2D; .config&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
-<h3 id="&#x542F;&#x52A8;&#x6D4F;&#x89C8;&#x5668;">&#x542F;&#x52A8;&#x6D4F;&#x89C8;&#x5668;</h3>
-<p>google-chrome --proxy-server=&quot;socks5://localhost:7077&quot;</p>
-
+                                <h3 id="&#x805A;&#x5408;&#x7684;&#x7528;&#x6CD5;">&#x805A;&#x5408;&#x7684;&#x7528;&#x6CD5;</h3>
+<pre><code>db.getCollection(&apos;aa&apos;).aggregate([
+    {$match : {
+        &quot;a&quot; : &quot;2016&quot;,
+        &quot;b&quot; : &quot;06&quot;,
+        &quot;c&quot; : &quot;14&quot;
+    }},
+    {$group : {
+        _id : &quot;$a&quot;,count : {$sum : 1}
+    }},
+    {$limit: 100}
+])
+</code></pre>
                                 
                                 </section>
                             
@@ -305,14 +301,10 @@
 
             
                 
-                <a href="redis.html" class="navigation navigation-prev " aria-label="Previous page: redis">
+                <a href="zeal.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: zeal">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="zeal.html" class="navigation navigation-next " aria-label="Next page: zeal">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -321,7 +313,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"shadowsock","level":"1.8","depth":1,"next":{"title":"zeal","level":"1.9","depth":1,"path":"zeal.md","ref":"zeal.md","articles":[]},"previous":{"title":"redis","level":"1.7","depth":1,"path":"redis.md","ref":"redis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shadowsock.md","mtime":"2016-05-31T09:41:39.000Z","type":"markdown"},"gitbook":{"version":"3.0.2","time":"2016-06-14T10:01:14.365Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mongodb","level":"1.10","depth":1,"previous":{"title":"zeal","level":"1.9","depth":1,"path":"zeal.md","ref":"zeal.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongodb.md","mtime":"2016-06-14T10:08:42.000Z","type":"markdown"},"gitbook":{"version":"3.0.2","time":"2016-06-14T10:01:14.365Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

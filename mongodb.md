@@ -1,13 +1,13 @@
 ### 聚合的用法
 ```
-db.getCollection('stockouts').aggregate([
+db.getCollection('aa').aggregate([
     {$match : {
-        "created_year" : "2016",
-        "created_month" : "06",
-        "created_day" : "14"
+        "a" : "2016",
+        "b" : "06",
+        "c" : "14"
     }},
     {$group : {
-        _id : "$outer_order_id",count : {$sum : 1}
+        _id : "$a",count : {$sum : 1}
     }},
     {$limit: 100}
 ])
