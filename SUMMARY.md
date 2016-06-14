@@ -7,5 +7,6 @@
 * [redis](redis.md)
 * [shadowsock](shadowsock.md)
 * [zeal](zeal.md)
+* [mongodb](mongodb.md)
 
 
