@@ -9,6 +9,6 @@ db.getCollection('aa').aggregate([
     {$group : {
         _id : "$a",count : {$sum : 1}
     }},
-    {$limit: 100}
+    {$limit: 10}
 ])
 ```
