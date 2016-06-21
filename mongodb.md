@@ -12,3 +12,19 @@ db.getCollection('aa').aggregate([
     {$limit: 10}
 ])
 ```
+
+### 嵌套对象查询+模糊查询
+```
+db.getCollection('aaa').find({'a.b':/ems/})
+```
+
+### 排序
+
+```
+db.getCollection('order_new').find({ },{}).sort({_id: -1})
+```
+
+
+
+
+
