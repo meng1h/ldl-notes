@@ -1,5 +1,7 @@
 ### centOS 上部署云数据库服务
+
 > sudo vi /etc/yum.repos.d/mongodb-org-3.0.repo
+
 ```
 
 [mongodb-org-3.0]
@@ -9,7 +11,6 @@ gpgcheck=0
 enabled=1
 
 ```
-
 > 安装 sudo yum install -y mongodb-org
 
 > 设置随系统启动运行 sudo chkconfig mongod on
