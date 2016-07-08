@@ -1,3 +1,45 @@
+##centos 安装
+
+```
+安装erlang
+以root身份执行下面命令
+yum install erlang
+2
+安装rabbitmq rpm包： 
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.5.0/rabbitmq-server-3.5.0-1.noarch.rpm
+rpm -ivh rabbitmq-server-3.5.0-1.noarch.rpm 
+3
+启动rabbitmq，并验证启动情况 
+rabbitmq-server --detached &ps aux |grep rabbitmq
+4
+以服务的方式启动
+service rabbitmq-server start
+5
+检查端口5672是否打开
+/sbin/iptables -I INPUT -p tcp --dport 5672 -j ACCEPT         
+/etc/rc.d/init.d/iptables save      
+/etc/init.d/iptables restart       
+/etc/init.d/iptables status
+centos 安装 rabbitmq
+centos 安装 rabbitmq
+6
+启用维护插件：
+rabbitmq-plugins enable rabbitmq_management 
+centos 安装 rabbitmq
+7
+重启rabbitmq
+service rabbitmq-server restart
+centos 安装 rabbitmq
+8
+UI界面 http://ip:15672/  用户名密码 guest
+无法登陆解决办法
+vim /etc/rabbitmq/rabbitmq.config
+写入信息，并保存
+[{rabbit, [{loopback_users, []}]}].
+
+```
+
+
 ### 启动server
 
 > sbin/rabbitmq-server
